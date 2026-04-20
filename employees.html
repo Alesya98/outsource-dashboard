@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,13 +8,14 @@
     <title>Dashboard</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
     <div class="layout">
     <header class="header">
         <aside class="sidebar">
-            <button class="burger-menu">
-                <img src="img/menu.png" alt="burger-menu">
-            </button>
+        <button class="burger-menu">
+            <img src="img/menu.png" alt="burger-menu">
+        </button>
             <div class="period-box">
                 <label for="month-select" class="sidebar__title">Period</label>
                 <select id="month-select" class="sidebar-select">
@@ -21,7 +23,7 @@
                     <option value="february">February</option>
                     <option value="march">March</option>
                     <option value="april" selected>April</option>
-                    <option value="may" >May</option>
+                    <option value="may">May</option>
                     <option value="june">June</option>
                     <option value="july">July</option>
                     <option value="august">August</option>
@@ -39,40 +41,36 @@
             </div>
 
             <nav class="nav-menu">
-                <a class="active-project" href="index.html">Projects</a>
-                <a href="employees.html">Employees</a>
+                <a href="index.html">Projects</a>
+                <a class="active-empl" href="employees.html">Employees</a>
             </nav>
         </aside>
     </header>
 
-    <main class="main"> 
+    <main class="main">
         <section class="project-container">
-            <h1 class="project__title">Projects</h1>
-            <div class="btns">
-                <button class="btn btn__add">+Add Project</button>
-                <button class="btn btn__seed">Seed Data</button>
-            </div>
+            <h1 class="project__title">Employees</h1>
+                <button class="btn btn__add">+Add Employee</button>
         </section>
         <section class="table-container">
             <table class="table">
                 <thead class="table-header">
                     <tr>
-                        <th>Company Name</th>
-                        <th>Project Name</th>
-                        <th>Budget</th>
-                        <th>Employee Capacity</th>
-                        <th>Employees</th>
-                        <th>Estimated Income</th>
+                        <th>Name</th>
+                        <th>Surname</th>
+                        <th>Age</th>
+                        <th>Position</th>
+                        <th>Salary</th>
+                        <th>Project</th>
+                        <th>Projected Income</th>
                         <th>Actions</th>
                     </tr>
                 </thead>
             </table>
 
-            <div class="total">
-                Total Estimated Income: <span class="income-val">$0.00</span>
-            </div>
         </section>
     </main>
     </div>
 </body>
+
 </html>
