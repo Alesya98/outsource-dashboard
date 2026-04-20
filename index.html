@@ -46,6 +46,34 @@
     </header>
 
     <main class="main"> 
+        <form class="form-hidden">
+            <h2 class="form-title">Add New Project</h2>
+            <div class="form-input">
+                <label for="name">Project Name: *</label>
+                <input type="text" id="name" minlength="3" required>
+                <span class="error-msg"></span>
+            </div>
+            <div class="form-input">
+                <label for="company">Company Name: *</label>
+                <input type="text" id="company" minlength="2" required>
+                <span class="error-msg"></span>
+            </div>
+            <div class="form-input">
+                <label for="budget">Budget: *</label>
+                <input type="number" id="budget"   min="0.01" step="0.01" required>
+                <span class="error-msg"></span>
+            </div>
+            <div class="form-input">
+                <label for="employee">Employee Capacity: *</label>
+                <input type="number" id="employee" min="1" required>
+                <span class="error-msg"></span>
+            </div>
+
+            <div class="form-btn">
+                <button type="submit" class="form-add disabled ">Add</button>
+                <button class="form-cancel">Cancel</button>
+            </div>
+        </form>
         <section class="project-container">
             <h1 class="project__title">Projects</h1>
             <div class="btns">
