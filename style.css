@@ -16,7 +16,8 @@ body {
 }
 
 .main {
-    padding: 100px 20px;
+    padding: 100px 20px 100px 260px;
+    transition: all 0.3s ease-in-out;
 }
 
 .sidebar {
@@ -27,6 +28,10 @@ body {
     display: flex;
     flex-direction: column;
     gap: 35px;
+    position: fixed;
+    left: 0;
+    z-index: 10;
+    transition: all 0.3s ease-in-out;
 }
 
 .burger-menu {
@@ -42,7 +47,20 @@ body {
     cursor: pointer;
     transform: rotate(180deg);
     transition: all 0.3s ease-in-out;
+}
 
+.sidebar.close-sidebar {
+    transform: translateX(-100%);
+}
+
+.burger-menu.toggle-btn{
+   position: absolute;
+   right: -60px;
+   top: 20px;
+}
+
+.main.toggle-content {
+    padding-left: 20px;
 }
 
 .period-box {
