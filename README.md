@@ -41,6 +41,6 @@ cd outsource-dashboard
 
 ### Развернутая версия 
 
-Приложение доступно по адресуЖ
-[]
+Приложение доступно по адресу:
+[https://alesya98.github.io/outsource-dashboard/]
 
