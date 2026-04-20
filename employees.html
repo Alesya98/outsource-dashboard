@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./img/favoconic.png" type="image/x-icon">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="layout">
+    <header class="header">
+        <aside class="sidebar">
+        <button class="burger-menu">
+            <img src="img/menu.png" alt="burger-menu">
+        </button>
+            <div class="period-box">
+                <label for="month-select" class="sidebar__title">Period</label>
+                <select id="month-select" class="sidebar-select">
+                    <option value="january">January</option>
+                    <option value="february">February</option>
+                    <option value="march">March</option>
+                    <option value="april" selected>April</option>
+                    <option value="may">May</option>
+                    <option value="june">June</option>
+                    <option value="july">July</option>
+                    <option value="august">August</option>
+                    <option value="september">September</option>
+                    <option value="october">October</option>
+                    <option value="november">November</option>
+                    <option value="december">December</option>
+                </select>
+
+                <select id="year-select" class="sidebar-select">
+                    <option value="2025">2025</option>
+                    <option value="2026" selected>2026</option>
+                    <option value="2027">2027</option>
+                </select>
+            </div>
+
+            <nav class="nav-menu">
+                <a href="index.html">Projects</a>
+                <a class="active-empl" href="employees.html">Employees</a>
+            </nav>
+        </aside>
+    </header>
+
+    <main class="main">
+        <section class="project-container">
+            <h1 class="project__title">Employees</h1>
+                <button class="btn btn__add">+Add Employee</button>
+        </section>
+        <section class="table-container">
+            <table class="table">
+                <thead class="table-header">
+                    <tr>
+                        <th>Name</th>
+                        <th>Surname</th>
+                        <th>Age</th>
+                        <th>Position</th>
+                        <th>Salary</th>
+                        <th>Project</th>
+                        <th>Projected Income</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+            </table>
+
+        </section>
+    </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
