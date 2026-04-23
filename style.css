@@ -170,7 +170,6 @@ background-color: rgb(43, 102, 104);
 
 /* Форма */
 .form-hidden {
-    /* display: none; */
     position: fixed;
     z-index: 10;
     right: 0;
@@ -208,7 +207,6 @@ background-color: rgb(43, 102, 104);
 
 .form-input input {
     padding: 7px;
-    /* border: 1px solid red; */
 }
 
 .form-btn {
@@ -227,9 +225,9 @@ background-color: rgb(43, 102, 104);
 }
 
 .error-msg {
+    display: block;
     color: red;
     font-size: 12px;
-    display: block;
     min-height: 15px;
 }
 
