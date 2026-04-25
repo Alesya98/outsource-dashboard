@@ -50,22 +50,22 @@
             <h2 class="form-title">Add New Project</h2>
             <div class="form-input">
                 <label for="name">Project Name: *</label>
-                <input type="text" id="name" minlength="3" required>
+                <input type="text" id="name" required>
                 <span class="error-msg"></span>
             </div>
             <div class="form-input">
                 <label for="company">Company Name: *</label>
-                <input type="text" id="company" minlength="2" required>
+                <input type="text" id="company" required>
                 <span class="error-msg"></span>
             </div>
             <div class="form-input">
                 <label for="budget">Budget: *</label>
-                <input type="number" id="budget"   min="0.01" step="0.01" required>
+                <input type="number" id="budget" required>
                 <span class="error-msg"></span>
             </div>
             <div class="form-input">
                 <label for="employee">Employee Capacity: *</label>
-                <input type="number" id="employee" min="1" required>
+                <input type="number" id="employee" required>
                 <span class="error-msg"></span>
             </div>
 
@@ -94,6 +94,7 @@
                         <th>Actions</th>
                     </tr>
                 </thead>
+                <tbody class="table-body" id="project-list"></tbody>
             </table>
 
             <div class="total">
@@ -102,6 +103,6 @@
         </section>
     </main>
     </div>
-    <script src="script.js"></script>
+    <script src="./script.js" type="module"></script>
 </body>
 </html>

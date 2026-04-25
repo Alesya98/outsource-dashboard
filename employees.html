@@ -48,6 +48,48 @@
     </header>
 
     <main class="main">
+         <form class="form-hidden">
+            <h2 class="form-title">Add New Employee</h2>
+            <div class="form-input">
+                <label for="name">Name: *</label>
+                <input type="text" id="name" required>
+                <span class="error-msg"></span>
+            </div>
+            <div class="form-input">
+                <label for="surname">Surname: *</label>
+                <input type="text" id="surname" required>
+                <span class="error-msg"></span>
+            </div>
+            <div class="form-input">
+                <label for="birth">Date of Birth: *</label>
+                <input type="date" id="birth" required>
+                <span class="error-msg"></span>
+            </div>
+            <div class="form-input">
+                <label for="position">Position: *</label>
+                <select  id="position" required>
+                    <option value="" selected>Select position</option>
+                    <option value="junior">Junior</option>
+                    <option value="middle">Middle</option>
+                    <option value="senior">Senior</option>
+                    <option value="lead">Lead</option>
+                    <option value="architect">Architect</option>
+                    <option value="bo">BO</option>
+                </select>
+                <span class="error-msg"></span>
+            </div>
+
+              <div class="form-input">
+                <label for="salary">Salary *</label>
+                <input type="number" id="salary" required>
+                <span class="error-msg"></span>
+            </div>
+
+            <div class="form-btn">
+                <button type="submit" class="form-add disabled ">Add</button>
+                <button class="form-cancel">Cancel</button>
+            </div>
+        </form>
         <section class="project-container">
             <h1 class="project__title">Employees</h1>
                 <button class="btn btn__add">+Add Employee</button>
@@ -66,12 +108,18 @@
                         <th>Actions</th>
                     </tr>
                 </thead>
+                <tbody class="table-body">
+                    <tr>
+
+                    </tr>
+                </tbody>
             </table>
+            
 
         </section>
     </main>
     </div>
-    <script src="script.js"></script>
+    <script src="./employees.js" type="module"></script>
 </body>
 
 </html>
