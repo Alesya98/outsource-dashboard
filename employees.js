@@ -134,8 +134,14 @@ inputs.forEach(item => {
 export function addEmployeeToTable(data) {
     const tableBody = document.querySelector('.table-body');
     const row = document.createElement('tr');
+    row.id = data.id
 
-    row.setAttribute('id', data.id);
+    const assignedCapacity = data.projects && data.projects.length > 0 ? data.projects[0].capacity : 0;
+    const cost = data.salary * Math.max(0.5, assignedCapacity);
+
+    const revenue = 0; 
+    const profit = revenue - cost;
+
 
     row.innerHTML = `
         <td>${data.name}</td>
@@ -143,9 +149,16 @@ export function addEmployeeToTable(data) {
         <td>${calculateAge(data.birth)}</td>
         <td>${data.position}</td>
         <td>$${data.salary || '-'}</td>
+        <td>$${cost.toFixed(2)}</td> 
         <td>${data.project || '-'}</td>
-        <td>${data.income || '-'}</td>
-        <td><button class="btn-delete">Delete</button></td>
+        <td style="color: ${profit < 0 ? 'red' : 'green'};">
+         $${profit.toFixed(2)}
+        </td>
+         <td class="actions-cell">
+            <button class="btn-avail">Availability</button>
+            <button class="btn-assign">Assign</button>
+            <button class="btn-delete">Delete</button>
+        </td>
     `;
 
     tableBody.appendChild(row);

@@ -251,11 +251,40 @@ background-color: rgb(43, 102, 104);
     font-size: 24px;
 }
 
-.btn-delete {
-padding: 10px;
-background-color: red;
-color: #FFF;
-border-radius: 6px;
-border: none;
-cursor: pointer;
+.actions-cell {
+    display: flex;
+    gap: 5px;
+    flex-direction: column; /* Кнопки в столбик, как на скрине */
+}
+
+.btn-avail { 
+    background-color: #a855f7; 
+    color: white; border: none; 
+    padding: 5px; 
+    border-radius: 4px; 
+    cursor: pointer; 
+}
+
+.btn-assign { 
+    background-color: #3b82f6; 
+    color: white; 
+    border: none; 
+    padding: 5px; 
+    border-radius: 4px; 
+    cursor: pointer; 
+}
+
+.btn-delete { 
+    background-color: #ef4444; 
+    color: white; 
+    border: none; 
+    padding: 5px; 
+    border-radius: 4px; 
+    cursor: pointer; 
+}
+
+.btn-avail:hover, 
+.btn-assign:hover, 
+.btn-delete:hover { 
+    opacity: 0.8; 
 }
