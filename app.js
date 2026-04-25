@@ -11,7 +11,9 @@ export const getCurrentPeriodKey = () => {
 }
 
 export function saveToLocalStorage(newEmployee) {
-    const key = getCurrentPeriodKey();
+    const month = document.querySelector('#month-select').selectedIndex + 1;
+    const year = document.querySelector('#year-select').value;
+    const key = `${year}.${month}`;
     
     let fullData = JSON.parse(localStorage.getItem('monthlyData')) || {};
     

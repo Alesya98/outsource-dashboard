@@ -164,11 +164,14 @@ form.addEventListener('submit', (e) => {
     checkForm();
 
     const formData = {
+    id: crypto.randomUUID(),
     name: document.getElementById('name').value,
     surname: document.getElementById('surname').value,
     birth: document.getElementById('birth').value,
     position: document.getElementById('position').value,
-    salary: document.getElementById('salary').value
+    salary: document.getElementById('salary').value,
+    projects: [], 
+    vacationDays: [] 
 };
 
     saveToLocalStorage(formData);
