@@ -18,6 +18,7 @@ body {
 .main {
     padding: 100px 20px 100px 260px;
     transition: all 0.3s ease-in-out;
+    width: 100%;
 }
 
 .sidebar {
@@ -205,7 +206,8 @@ background-color: rgb(43, 102, 104);
     font-size: 18px;
 }
 
-.form-input input {
+.form-input input,
+.form-input select {
     padding: 7px;
 }
 
@@ -242,4 +244,18 @@ background-color: rgb(43, 102, 104);
 
 .form-cancel {
     background-color: red;
+}
+
+.table-body td {
+    padding: 10px;
+    font-size: 24px;
+}
+
+.btn-delete {
+padding: 10px;
+background-color: red;
+color: #FFF;
+border-radius: 6px;
+border: none;
+cursor: pointer;
 }
