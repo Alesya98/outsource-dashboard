@@ -1,4 +1,4 @@
-import { saveToLocalStorage } from "./app.js";
+import { deleteFromLocalStorage, saveToLocalStorage } from "./app.js";
 
 
 // меню 'гамбургер'
@@ -135,12 +135,14 @@ export function addEmployeeToTable(data) {
     const tableBody = document.querySelector('.table-body');
     const row = document.createElement('tr');
 
+    row.setAttribute('id', data.id);
+
     row.innerHTML = `
         <td>${data.name}</td>
         <td>${data.surname}</td>
         <td>${calculateAge(data.birth)}</td>
         <td>${data.position}</td>
-        <td>${data.salary || '-'}</td>
+        <td>$${data.salary || '-'}</td>
         <td>${data.project || '-'}</td>
         <td>${data.income || '-'}</td>
         <td><button class="btn-delete">Delete</button></td>
@@ -179,4 +181,17 @@ form.addEventListener('submit', (e) => {
 
     form.reset();
     form.classList.remove('openForm')
+})
+
+ const tableBody = document.querySelector('.table-body');
+
+tableBody.addEventListener('click', (e) => {
+   if (e.target.classList.contains('btn-delete')) {
+        const row = e.target.closest('tr');
+
+        deleteFromLocalStorage(row.id);
+         row.remove();
+
+          console.log('Сотрудник удален');
+   }
 })
